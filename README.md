@@ -61,5 +61,7 @@ enter that dir with cd mana_miner
 
 place the mine.py file in this directory
 
+make sure to fund your wallet with atleast 2 UTxOs, one exactly 5ADA utxo for collateral and another to mine with. 
+
 execute the file with python .\mine.py
 
