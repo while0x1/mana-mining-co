@@ -1,4 +1,5 @@
-<img src="https://github.com/while0x1/Mana-Mining/blob/main/manaLogo.PNG" width="200" height="200">
+<img src="https://github.com/while0x1/mana-mining-co/blob/main/manaLogo.PNG" width="200" height="200">
+
 
 # About
 MANA is a fair mineable meme token on the Cardano blockchain. There is no premine or insider allocation of MANA - - all tokens must be MINED fairly.  MANA was designed to be resistant to raids by bots. MANA has a fixed supply and the miner requires very little resources, it is not CPU or GPU intensive. A Mining NFT licence can be used to increase mining sucess but is not strictly required to mine.  
