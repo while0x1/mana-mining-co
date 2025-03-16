@@ -7,7 +7,7 @@ MANA is a fair mineable meme token on the Cardano blockchain. There is no premin
 # How it works
 Anyone can run the miner and mine MANA tokens. 
 
-The contract tracks mana mining licences and assigns each successive block to a licence. If a miner has the licence for that block they receive an exclusive 40 second window with which to mine that block. If the licence holder does not mine the block in 40seconds that block can then be mined by anyone - no licence is required to mine a block after the 40second headstart has elapsed. The contract will increment the licence no. allowed to mint each successive block. After the licence count is reached the next block is open to anyone to mine ie no license assigned to mine. After all the licences have been cycled through the contract begins the cycle again assigning the next block to licence no 0. 
+The contract tracks mana mining licences and assigns each successive block to a licence. If a miner has the licence for that block they receive an exclusive 45 second window with which to mine that block. If the licence holder does not mine the block in 40seconds that block can then be mined by anyone - no licence is required to mine a block after the 45 second headstart has elapsed. The contract will increment the licence no. allowed to mint each successive block. After the licence count is reached the next block is open to anyone to mine ie no license assigned to mine. After all the licences have been cycled through the contract begins the cycle again assigning the next block to licence no 0. 
 
 The contract also enforces a miner to hold a small amount of MANA in order to run the miner which increases over time in accordance with block production.
 
