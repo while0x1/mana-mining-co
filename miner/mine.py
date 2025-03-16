@@ -267,7 +267,7 @@ elif not magic_exists:
         digest.update(toilandtrouble)
         key = digest.finalize()
         encrypted_data = encrypt_data(seedIn.encode(), key)
-        save_seed(encrypted_data)
+        save_occult(encrypted_data)
         print('Encrypted Seed Saved 🔒')      
     print()
     print('Enter blockfrost key:')
