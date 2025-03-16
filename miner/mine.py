@@ -537,6 +537,7 @@ while True:
         print(f' Tx fee: {signed_tx.transaction_body.fee/1000000}')
         print('Success - block mined '  + " " + str(signed_tx.id) + "⛏️")
         print('Waiting For Tx Confirmation - 🔍')
+        sleep_cnt = 0
         while True:
             time.sleep(5)
             txFound = False
@@ -550,6 +551,10 @@ while True:
                     break
             if txFound:
                 break
+            sleep_cnt += 1
+            if sleep_cnt > 9:
+                break
+                print('Tx took to long to find - aborting search.')
     except Exception as e:
         exception_msg = str(e)
         print(e)
