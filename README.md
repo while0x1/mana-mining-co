@@ -51,3 +51,5 @@ Install dependencies using pip package manager - pip install pycardano
 
 If you want to easily encrypt and store your keys for ease of use you will need to install the cryptography library - pip install cryptography
 
+download the mine.py file 
+
