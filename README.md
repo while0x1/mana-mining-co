@@ -51,5 +51,15 @@ Install dependencies using pip package manager - pip install pycardano
 
 If you want to easily encrypt and store your keys for ease of use you will need to install the cryptography library - pip install cryptography
 
-download the mine.py file 
+download the mine.py file from the miner folder
+
+navigate to a directory on your system you want to house the miner. Best to use a directory that your user has write permissions for so the miner can create files when you run it.
+
+create a directory eg.> mkdir mana_miner
+
+enter that dir with cd mana_miner
+
+place the mine.py file in this directory
+
+execute the file with python .\mine.py
 
