@@ -529,7 +529,7 @@ while True:
         builder.add_output(TransactionOutput(address,Value(minVal,MANA_OUT)))
 
         builder.add_script_input(wizardUtxo, script=ref_script_utxo, redeemer=spendRedeemer)
-        #builder.outputs = sorted(builder.outputs, key=lambda d: (0 if d.outputAddress == script_address else 1))
+        builder.fee_buffer = 10000
         signed_tx = builder.build_and_sign([payment_skey], address,auto_validity_start_offset=-3,auto_ttl_offset=180)
         #print(signed_tx.transaction_body.inputs)
         #print(builder.collaterals)    
