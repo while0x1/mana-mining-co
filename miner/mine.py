@@ -375,8 +375,8 @@ while True:
             REWARD = BASE_REWARD
         
         stash_required = 0    
-        if current_block_datum.block_num > 200:
-            stash_required = current_block_datum.block_num // 200 # this must match the validators stash on production! --__---__--
+        if current_block_datum.block_num > 100:
+            stash_required = current_block_datum.block_num // 20 # this must match the validators stash on production! --__---__--
             print(f'Stash requirement for mining: {stash_required} MANA 💎')
         
         MANA_OUT = MultiAsset.from_primitive({bytes.fromhex(manaPolicy): {b'MANA': REWARD + stash_required}})
