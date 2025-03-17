@@ -515,12 +515,12 @@ while True:
         lovelace_balance = 0
         for utxo in minerUtxos:
             if col_found:
-		if utxo != col_utxo:
+                if utxo != col_utxo:
                     print('potential input added')
                     builder.potential_inputs.append(utxo)
                 else:
                     print('skipping collateral utxo potential input')
-	    else:
+            else:
                 print('no collateral utxo adding all inputs as potential inputs')
                 builder.potential_inputs.append(utxo)
             if utxo.output.amount.multi_asset:
