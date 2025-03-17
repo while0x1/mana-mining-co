@@ -498,10 +498,10 @@ while True:
         builder.add_output(TransactionOutput(script_address,Value(2500000,wizard), datum=newBlockDatum))#mustbeindex0 out
         
         
-        if stash_required:
-            for utxo in stash_utxos:
-                builder.add_input(utxo)
-                print('AddedManaToInputs')
+        #if stash_required:
+        #    for utxo in stash_utxos:
+        #        builder.add_input(utxo)
+        #        print('AddedManaToInputs')
         if have_licence:
             print('Using Licence to mint immediately 🚀')
             for utxo in licenceNameArray:
