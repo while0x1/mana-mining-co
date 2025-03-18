@@ -65,3 +65,5 @@ make sure to fund your wallet with atleast 2 UTxOs, one exactly 5ADA utxo for co
 
 execute the file with python .\mine.py
 
+A small amount of MANA is required in order to run the Miner. Consult the mana explorer to see the current amount required to mine. If you are starting a new miner you will need to procure some $MANA in order to mine. 
+
