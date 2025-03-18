@@ -516,7 +516,7 @@ while True:
         for utxo in minerUtxos:
             if col_found:
                 if utxo != col_utxo:
-                    print('potential input added')
+                    #print('potential input added')
                     builder.potential_inputs.append(utxo)
                 else:
                     print('skipping collateral utxo potential input')
