@@ -563,7 +563,7 @@ while True:
         if "'traces': ['NameError: dOk']" in exception_msg:
             print('Datums incorrect - mischief afoot? 🦊')       
         if "Namespace(ScriptFailures" in exception_msg:
-            print('scriptFailure')
+            print('Script Validation Failure - blockTime?')
             contract_happy = False
         if "MissingInput" in exception_msg:
             contract_happy = True
