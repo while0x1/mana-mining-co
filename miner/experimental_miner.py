@@ -552,6 +552,9 @@ while True:
         if "'traces': ['17" in exception_msg:
             print("TxFailed: Smart Contract enforced delay for Non licence holder ❌")
             contract_happy = False
+        if "Namespace(ScriptFailures" in exception_msg:
+            print('Script Validation Failure - blockTime?')
+            contract_happy = False
         if 'Unknown transaction input (missing from UTxO set)' in exception_msg:
             print('Block already Mined - \N{sleeping symbol} sleeping for UTXO state updates')
             wait_with_updates(30)
@@ -562,9 +565,6 @@ while True:
             print('Minting more tokens than allowed -- 🕵️‍♂️ avarice.')
         if "'traces': ['NameError: dOk']" in exception_msg:
             print('Datums incorrect - mischief afoot? 🦊')       
-        if "Namespace(ScriptFailures" in exception_msg:
-            print('Script Validation Failure - blockTime?')
-            contract_happy = False
         if "MissingInput" in exception_msg:
             contract_happy = True
             print('Block already Mined - \N{sleeping symbol} sleeping for UTXO state updates ')
