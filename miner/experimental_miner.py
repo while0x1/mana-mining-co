@@ -22,7 +22,7 @@ from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.backends import default_backend
 
 #Wallet Balance below this Value Will Cease Mining
-WALLET_MIN = 10
+WALLET_MIN = 6
 MIN_BLOCK_TIME = 600000
 NO_LIC_WAIT = 645000
 SUBMIT_API = ''
@@ -553,7 +553,8 @@ while True:
             print("TxFailed: Smart Contract enforced delay for Non licence holder ❌")
             contract_happy = False
         if 'Unknown transaction input (missing from UTxO set)' in exception_msg:
-            print('Block already Mined')
+            print('Block already Mined - \N{sleeping symbol} sleeping for UTXO state updates')
+            wait_with_updates(30)
             contract_happy = True
         if "'traces': ['wizard']" in exception_msg:
             print('No Wizard in Tx -- trying to deceive the gods? 💀')
@@ -562,9 +563,13 @@ while True:
         if "'traces': ['NameError: dOk']" in exception_msg:
             print('Datums incorrect - mischief afoot? 🦊')       
         if "Namespace(ScriptFailures" in exception_msg:
+            print('scriptFailure')
             contract_happy = False
         if "MissingInput" in exception_msg:
             contract_happy = True
+            print('Block already Mined - \N{sleeping symbol} sleeping for UTXO state updates ')
+            wait_with_updates(30)
+            
         #print(e)
         time.sleep(5)
         #print(builder.inputs)
